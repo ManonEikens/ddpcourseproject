@@ -1,0 +1,66 @@
+---
+title       : Developing Data Products
+subtitle    : Course project - Create a shiny-app
+author      : M. Eikens
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## Create a shiny-app
+
+For the course project you have to make a shiny app
+
+You can show what you've learned in the course
+
+It can be everything you want it to be!
+
+--- .class #id 
+
+## Requirements
+
+1. Some form of input (widget)
+2. Some operation on the ui input in server.R
+3. Some reactive output displayed as a result of server calculations
+4. Include enough documentation
+5. Documentation should be at the Shiny website itself
+
+--- .class #id 
+
+## My app
+
+For my app I decided to provide a calculator to calculate the optimal calorie intake per day
+
+To do that I take into account the following parameters:
+
+1. Gender
+2. Age
+3. Height
+4. Weight
+
+--- .class #id 
+
+## Example of the formula
+
+Here is an example for a male:
+
+- 40 years
+- height 180 centimeters
+- weight 70 kilograms
+
+
+```r
+age <- 40
+height <- 180
+weight <- 70
+calorieintake <- 10 * weight + 6.25 * height - 5 * age + 5
+calorieintake
+```
+
+```
+## [1] 1630
+```
+
